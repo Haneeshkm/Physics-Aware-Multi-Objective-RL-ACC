@@ -7,7 +7,7 @@
 > *¹CHRIST (Deemed to be University), Bangalore*  
 > *²BMS College of Engineering, Bangalore*
 
-**Journal**: International Journal of Intelligent Transportation Systems Research (2025)  
+**Journal**: International Journal of Intelligent Transportation Systems Research (2026)  
 **DOI**: [Add DOI when available] | **PDF**: [paper/International_Journal_of_Intelligent_Transportation_Systems_Research.pdf](paper/International_Journal_of_Intelligent_Transportation_Systems_Research.pdf)
 
 ---
@@ -32,6 +32,39 @@
 
 ### 🚀 Quick Start
 
-```bash
-git clone https://github.com/YOUR_USERNAME/Physics-Aware-Multi-Objective-RL-ACC.git
-cd Physics-Aware-Multi-Objective-RL-ACC
+run('src/Train_ACC_DDPG.m')
+→ Saves efficient_acc_agent.mat (best agent)
+run('src/Highway.m')
+Other Scenarios
+
+EmergencyBrakeScenario.m
+LaneChangeScenario.m
+TrafficSignalScenario.m
+VaryingRoadScenario.m
+Results from Paper
+The physics-aware RL controller achieves:
+
+Stable following with improved safety margins
+Smoother acceleration (lower jerk)
+Better energy efficiency compared to classical PID/ACC
+Robust performance under varying road friction and gradients
+
+(Plots generated automatically in Highway.m and analysis function)
+
+
+File,Purpose
+ACCEnv.m,Main physics-aware RL environment
+Train_ACC_DDPG.m,DDPG training script (paper version)
+Highway.m,Highway driving demo
+*.Scenario.m,Custom traffic scenarios
+DQNAgent.m + replayMemory.m,Alternative DQN implementation
+
+@article{haneesh2025multi,
+  title={Multi-Objective Reinforcement Learning with Physics-Aware Vehicle Dynamics for Safe and Efficient Adaptive Cruise Control},
+  author={Haneesh, K.M. and Jisha, P.},
+  journal={International Journal of Intelligent Transportation Systems Research},
+  year={2026},
+  publisher={Springer}
+}
+
+
